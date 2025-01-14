@@ -12,19 +12,29 @@ const Home = () => {
 
       {/* Featured Categories */}
       <section className="py-12">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-8">
-            Featured Categories
+            Shop by Categories
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {/* Category Cards */}
             {[
               { name: "Men", image: "/path-to-men-image.jpg", link: "/men" },
               { name: "Women", image: "/path-to-women-image.jpg", link: "/women" },
-              { name: "Kids", image: "/path-to-kids-image.jpg", link: "/kids" },
-              { name: "Jordan", image: "/path-to-jordan-image.jpg", link: "/jordan" },
+              { name: "Kids & Baby", image: "/path-to-kids-image.jpg", link: "/kids" },
+              { name: "Dresses", image: "/path-to-jordan-image.jpg", link: "/jordan" },
+              { name: "Tops", image: "/path-to-jordan-image.jpg", link: "/jordan" },
+              { name: "Sports & Outdore", image: "/path-to-jordan-image.jpg", link: "/jordan" },
+              { name: "Underwear", image: "/path-to-jordan-image.jpg", link: "/jordan" },
+              { name: "Home & Living", image: "/path-to-jordan-image.jpg", link: "/jordan" },
+              { name: "Shoes", image: "/path-to-jordan-image.jpg", link: "/jordan" },
+              { name: "Bags", image: "/path-to-jordan-image.jpg", link: "/jordan" },
+              { name: "Jewelry", image: "/path-to-jordan-image.jpg", link: "/jordan" },
+              { name: "Watches", image: "/path-to-jordan-image.jpg", link: "/jordan" },
+              { name: "Beauty", image: "/path-to-jordan-image.jpg", link: "/jordan" },
             ].map((category, index) => (
-              <Link
+            <div>
+                <Link
                 to={category.link}
                 key={index}
                 className="group relative block overflow-hidden rounded-lg shadow-lg"
@@ -35,12 +45,14 @@ const Home = () => {
                   className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition duration-300"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <h3 className="text-white text-xl font-semibold group-hover:underline">
-                    {category.name}
-                  </h3>
-                </div>
+               
               </Link>
+               <div className=" flex items-center justify-center">
+               <h3 className="text-black mt-3 text-xl font-semibold group-hover:underline">
+                 {category.name}
+               </h3>
+             </div>
+            </div>
             ))}
           </div>
         </div>
