@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Navbar from './component/Navbar'
 import { BrowserRouter as Router , Routes , Route } from 'react-router-dom'
 import Home from './Pages/Home'
+import About from './Pages/About'
 import Nav from './component/Navbar/Nav'
 
 
@@ -14,6 +15,7 @@ function App() {
     {/* <Nav /> */}
    <Navbar /> 
    <Home />
+   <About />
    </div>
    </Router>
   )

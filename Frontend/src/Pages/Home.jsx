@@ -7,7 +7,7 @@ const Home = () => {
     <div className="bg-gray-100">
       {/* Hero Section */}
       <section className="bg-cover bg-center cursor-pointer h-[80vh] flex items-center justify-center text-center relative" style={{ backgroundImage: `url(${nike})` }}>
-       
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel eveniet neque quod distinctio, ea eaque, officia fugit omnis dolor tenetur voluptatem! Eum, ipsum deserunt? Magnam harum non dicta dignissimos accusamus!
       </section>
 
       {/* Featured Categories */}
