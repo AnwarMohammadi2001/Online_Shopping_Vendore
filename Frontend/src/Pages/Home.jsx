@@ -12,6 +12,7 @@ import shose1 from "../assets/images/categories/shose1.webp";
 import watch from "../assets/images/categories/wathc.jpeg";
 import women from "../assets/images/categories/women.jpeg";
 import Hero from "../component/Hero/Hero";
+import PopularBrands from "../component/Brands/PopularBrands";
 
 const Home = () => {
   const categories = [
@@ -91,29 +92,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="py-12 bg-gray-200">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Stay Updated</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            Subscribe to our newsletter for the latest news, trends, and
-            exclusive offers.
-          </p>
-          <form className="flex justify-center items-center gap-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="px-4 py-3 w-full max-w-sm rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
-            />
-            <button
-              type="submit"
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </section>
+     
+      <PopularBrands />
     </div>
   );
 };
