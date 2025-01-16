@@ -1,59 +1,70 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import nike from "../assets/images/nike1.png"
+
+import nike from "../assets/images/nike1.png";
+import bag from '../assets/images/categories/bags.jpg';
+import boot from '../assets/images/categories/boot.jpg';
+import jewelry from '../assets/images/categories/jewelry.jpeg';
+import kids from '../assets/images/categories/kids.jpeg';
+import men from '../assets/images/categories/men.jpeg';
+import shoes from '../assets/images/categories/shoes.webp';
+import shose1 from '../assets/images/categories/shose1.webp';
+import watch from '../assets/images/categories/wathc.jpeg';
+import women from '../assets/images/categories/women.jpeg';
 
 const Home = () => {
+  const categories = [
+    { name: "Men", image: men, link: "/men" },
+    { name: "Women", image: women, link: "/women" },
+    { name: "Kids & Baby", image: kids, link: "/kids" },
+    { name: "Dresses", image: kids, link: "/dresses" },
+    { name: "Tops", image: bag, link: "/tops" },
+    { name: "Sports & Outdoor", image: shoes, link: "/sports-outdoor" },
+    { name: "Underwear", image: women, link: "/underwear" },
+    { name: "Home & Living", image: shose1, link: "/home-living" },
+    { name: "Shoes", image: boot, link: "/shoes" },
+    { name: "Bags", image: bag, link: "/bags" },
+    { name: "Jewelry", image: jewelry, link: "/jewelry" },
+    { name: "Watches", image: watch, link: "/watches" },
+    // { name: "Beauty", image: shoes, link: "/beauty" },
+  ];
+
   return (
     <div className="bg-gray-100">
       {/* Hero Section */}
       <section className="bg-cover bg-center cursor-pointer h-[80vh] flex items-center justify-center text-center relative" style={{ backgroundImage: `url(${nike})` }}>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel eveniet neque quod distinctio, ea eaque, officia fugit omnis dolor tenetur voluptatem! Eum, ipsum deserunt? Magnam harum non dicta dignissimos accusamus!
+        {/* Content */}
       </section>
 
       {/* Featured Categories */}
       <section className="py-12">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-8xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-8">
             Shop by Categories
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
             {/* Category Cards */}
-            {[
-              { name: "Men", image: "/path-to-men-image.jpg", link: "/men" },
-              { name: "Women", image: "/path-to-women-image.jpg", link: "/women" },
-              { name: "Kids & Baby", image: "/path-to-kids-image.jpg", link: "/kids" },
-              { name: "Dresses", image: "/path-to-jordan-image.jpg", link: "/jordan" },
-              { name: "Tops", image: "/path-to-jordan-image.jpg", link: "/jordan" },
-              { name: "Sports & Outdore", image: "/path-to-jordan-image.jpg", link: "/jordan" },
-              { name: "Underwear", image: "/path-to-jordan-image.jpg", link: "/jordan" },
-              { name: "Home & Living", image: "/path-to-jordan-image.jpg", link: "/jordan" },
-              { name: "Shoes", image: "/path-to-jordan-image.jpg", link: "/jordan" },
-              { name: "Bags", image: "/path-to-jordan-image.jpg", link: "/jordan" },
-              { name: "Jewelry", image: "/path-to-jordan-image.jpg", link: "/jordan" },
-              { name: "Watches", image: "/path-to-jordan-image.jpg", link: "/jordan" },
-              { name: "Beauty", image: "/path-to-jordan-image.jpg", link: "/jordan" },
-            ].map((category, index) => (
-            <div>
-                <Link
-                to={category.link}
-                key={index}
-                className="group relative block overflow-hidden rounded-lg shadow-lg"
-              >
-                <img
-                  src={category.image}
-                  alt={category.name}
-                  className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition duration-300"></div>
-               
-              </Link>
-               <div className=" flex items-center justify-center">
-               <h3 className="text-black mt-3 text-xl font-semibold group-hover:underline">
-                 {category.name}
-               </h3>
-             </div>
-            </div>
-            ))}
+            {categories.map((category, index) => (
+  <Link
+    to={category.link}
+    key={index}
+    className=" block overflow-hidden rounded-md"
+  >
+    {/* Image */}
+    <img
+      src={category.image}
+      alt={category.name}
+      className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
+    />
+    {/* Title Below Image */}
+    <div className="text-center mt-3">
+      <h3 className="text-black text-xl font-semibold ">
+        {category.name}
+      </h3>
+    </div>
+  </Link>
+))}
+
           </div>
         </div>
       </section>
