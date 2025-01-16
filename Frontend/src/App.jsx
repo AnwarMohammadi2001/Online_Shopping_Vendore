@@ -15,7 +15,7 @@ function App() {
     {/* <Nav /> */}
    <Navbar /> 
    <Home />
-   <About />
+  
    </div>
    </Router>
   )

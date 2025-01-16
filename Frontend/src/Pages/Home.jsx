@@ -2,15 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import nike from "../assets/images/nike1.png";
-import bag from '../assets/images/categories/bags.jpg';
-import boot from '../assets/images/categories/boot.jpg';
-import jewelry from '../assets/images/categories/jewelry.jpeg';
-import kids from '../assets/images/categories/kids.jpeg';
-import men from '../assets/images/categories/men.jpeg';
-import shoes from '../assets/images/categories/shoes.webp';
-import shose1 from '../assets/images/categories/shose1.webp';
-import watch from '../assets/images/categories/wathc.jpeg';
-import women from '../assets/images/categories/women.jpeg';
+import bag from "../assets/images/categories/bags.jpg";
+import boot from "../assets/images/categories/boot.jpg";
+import jewelry from "../assets/images/categories/jewelry.jpeg";
+import kids from "../assets/images/categories/kids.jpeg";
+import men from "../assets/images/categories/men.jpeg";
+import shoes from "../assets/images/categories/shoes.webp";
+import shose1 from "../assets/images/categories/shose1.webp";
+import watch from "../assets/images/categories/wathc.jpeg";
+import women from "../assets/images/categories/women.jpeg";
+import Hero from "../component/Hero/Hero";
 
 const Home = () => {
   const categories = [
@@ -32,10 +33,13 @@ const Home = () => {
   return (
     <div className="bg-gray-100">
       {/* Hero Section */}
-      <section className="bg-cover bg-center cursor-pointer h-[80vh] flex items-center justify-center text-center relative" style={{ backgroundImage: `url(${nike})` }}>
+      <section
+        className="bg-cover bg-center cursor-pointer h-[80vh] flex items-center justify-center text-center relative"
+        style={{ backgroundImage: `url(${nike})` }}
+      >
         {/* Content */}
       </section>
-
+      <Hero />
       {/* Featured Categories */}
       <section className="py-12">
         <div className="max-w-8xl mx-auto px-6">
@@ -45,26 +49,25 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
             {/* Category Cards */}
             {categories.map((category, index) => (
-  <Link
-    to={category.link}
-    key={index}
-    className=" block overflow-hidden rounded-md"
-  >
-    {/* Image */}
-    <img
-      src={category.image}
-      alt={category.name}
-      className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
-    />
-    {/* Title Below Image */}
-    <div className="text-center mt-3">
-      <h3 className="text-black text-xl font-semibold ">
-        {category.name}
-      </h3>
-    </div>
-  </Link>
-))}
-
+              <Link
+                to={category.link}
+                key={index}
+                className=" block overflow-hidden rounded-md"
+              >
+                {/* Image */}
+                <img
+                  src={category.image}
+                  alt={category.name}
+                  className="w-full h-60 object-cover   transition-transform duration-300 group-hover:scale-105"
+                />
+                {/* Title Below Image */}
+                <div className="text-center mt-3">
+                  <h3 className="text-black text-xl font-semibold ">
+                    {category.name}
+                  </h3>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -76,7 +79,8 @@ const Home = () => {
             Limited Time Offers
           </h2>
           <p className="text-lg md:text-xl mb-8">
-            Don’t miss out on our special deals! Shop now and enjoy amazing discounts on your favorite items.
+            Don’t miss out on our special deals! Shop now and enjoy amazing
+            discounts on your favorite items.
           </p>
           <Link
             to="/offers"
@@ -90,11 +94,10 @@ const Home = () => {
       {/* Newsletter Section */}
       <section className="py-12 bg-gray-200">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Stay Updated
-          </h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Stay Updated</h2>
           <p className="text-lg text-gray-700 mb-6">
-            Subscribe to our newsletter for the latest news, trends, and exclusive offers.
+            Subscribe to our newsletter for the latest news, trends, and
+            exclusive offers.
           </p>
           <form className="flex justify-center items-center gap-4">
             <input

@@ -7,6 +7,17 @@ const SearchBar = () => {
   const [searchValue, setSearchValue] = useState("");
   const [recentSearches, setRecentSearches] = useState([]);
 
+  // Load recent searches from localStorage on component mount
+  useEffect(() => {
+    const savedSearches = JSON.parse(localStorage.getItem("recentSearches")) || [];
+    setRecentSearches(savedSearches);
+  }, []);
+
+  // Save recent searches to localStorage whenever the list changes
+  useEffect(() => {
+    localStorage.setItem("recentSearches", JSON.stringify(recentSearches));
+  }, [recentSearches]);
+
   const handleSearchClick = () => {
     setIsExpanded(true);
   };
@@ -19,7 +30,10 @@ const SearchBar = () => {
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (searchValue.trim()) {
-      setRecentSearches([searchValue, ...recentSearches]);
+      // Add the search term to the list if it doesn't already exist
+      if (!recentSearches.includes(searchValue)) {
+        setRecentSearches((prev) => [searchValue, ...prev]);
+      }
       setSearchValue("");
     }
   };
@@ -38,8 +52,6 @@ const SearchBar = () => {
   // Constant items
   const constantItems = [
     "Nike",
-    ,
-    ,
     "air max",
     "killshot",
     "jordan",
@@ -62,7 +74,7 @@ const SearchBar = () => {
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
           placeholder="Search..."
-          className={`flex bg-transparent outline-none w-32  text-gray-700 `}
+          className={`flex bg-transparent outline-none w-32 text-gray-700`}
         />
       </form>
 
