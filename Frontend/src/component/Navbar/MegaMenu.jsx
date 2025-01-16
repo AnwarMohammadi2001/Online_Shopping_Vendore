@@ -5,7 +5,7 @@ const MegaMenu = ({ itemName, content, isVisible }) => {
     <div
       className={`absolute left-0 top-full w-full ${
         isVisible ? "translate-x-0" : "translate-x-full"
-      } overflow-hidden bg-white  shadow-lg z-20  transition-transform duration-500`}
+      } overflow-hidden bg-black  shadow-lg z-20  transition-transform duration-500`}
       style={{
         height: isVisible ? "auto" : "0",
         paddingTop: isVisible ? "1rem" : "0",

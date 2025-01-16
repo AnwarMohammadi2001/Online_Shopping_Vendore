@@ -43,7 +43,7 @@ const Home = () => {
       <Hero />
       {/* Featured Categories */}
       <section className="py-12">
-        <div className="max-w-8xl mx-auto px-6">
+        <div className="max-w-[90%] mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-8">
             Shop by Categories
           </h2>

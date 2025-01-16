@@ -1,9 +1,11 @@
 import { useState } from 'react'
-import Navbar from './component/Navbar'
+import Navbar from './component/Navbar/Navbar'
 import { BrowserRouter as Router , Routes , Route } from 'react-router-dom'
 import Home from './Pages/Home'
 import About from './Pages/About'
-import Nav from './component/Navbar/Nav'
+import Landing from './component/Landing/Landing'
+import Apparel from './component/Landing/apparel/Apparel'
+
 
 
 function App() {
@@ -11,12 +13,17 @@ function App() {
 
   return (
    <Router>
-   <div className=''>
+    <Navbar /> 
+   
+    <Routes>
+  <Route index element={<Home />} />
     {/* <Nav /> */}
-   <Navbar /> 
-   <Home />
+   <Route path='/landing' element={<Landing />} >
+   <Route path='apparel' element={<Apparel />} /> 
+   </Route>
   
-   </div>
+   
+   </Routes>
    </Router>
   )
 }
