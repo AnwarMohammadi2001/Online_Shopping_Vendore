@@ -45,8 +45,8 @@ const PopularBrands = () => {
           spaceBetween={10} // Space between slides
           slidesPerView={8} // Show 6 items at once
           autoplay={{
-            delay: 1000, // Delay between slides
-            disableOnInteraction: false, // Continue autoplay even after user interaction
+            delay: 1000, // Delay between
+            disableOnInteraction: false, //
           }}
           loop={true} // Enable loop
           navigation={{
@@ -68,7 +68,6 @@ const PopularBrands = () => {
           ))}
         </Swiper>
 
-        {/* Custom Navigation Buttons */}
         <div className="button-prev-slide hidden group-hover:flex  w-[40px] h-[40px] items-center justify-center rounded-full absolute left-2 z-20 top-1/2 -translate-y-1/2 bg-gray-300">
           <MdArrowBackIos size={24} />
         </div>

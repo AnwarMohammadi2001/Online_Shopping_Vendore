@@ -47,7 +47,6 @@ const Slider = () => {
           </SwiperSlide>
         ))}
 
-        {/* Custom Navigation Buttons */}
         <div className="button-next-slide group-hover:flex hidden w-[40px] h-[40px] items-center justify-center rounded-full absolute right-10 z-20 bottom-10 bg-white">
           <MdArrowForwardIos />
         </div>
