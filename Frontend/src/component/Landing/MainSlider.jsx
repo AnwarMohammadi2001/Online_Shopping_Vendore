@@ -18,7 +18,7 @@ const MainSlider = () => {
   const images = [hero1, hero2, hero3, hero4, hero5, hero6, hero7];
 
   return (
-    <div className="w-full group mt-10 relative">
+    <div className="w-full group mt-1 relative">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         pagination={{

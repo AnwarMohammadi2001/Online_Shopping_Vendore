@@ -12,11 +12,11 @@ const SearchProduct = () => {
 
   return (
     <div className="flex flex-col mt-5 items-center py-7 justify-center w-full">
-      <div className="w-[90%] grid grid-cols-4 gap-5">
+      <div className="w-[80%] grid  grid-cols-4 gap-5">
         {products.map((pro, index) => (
           <Link
             key={index}
-            className="w-full h-[300px] rounded-2xl cursor-pointer overflow-hidden"
+            className="w-full h-[270px] rounded-2xl cursor-pointer overflow-hidden"
           >
             <img
               src={pro}
