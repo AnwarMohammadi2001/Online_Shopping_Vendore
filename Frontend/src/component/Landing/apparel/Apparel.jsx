@@ -1,9 +1,12 @@
 import React from 'react'
+import Slider from '../../Hero/Slider'
+import BuyInCategory from '../BuyInCategory'
 
 const Apparel = () => {
   return (
     <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis dolorem animi fugit alias, voluptatem doloremque error neque quisquam necessitatibus vitae, laboriosam deserunt, facere iste iusto nihil quod minus perferendis rerum?
+      <Slider />
+      <BuyInCategory />
     </div>
   )
 }
