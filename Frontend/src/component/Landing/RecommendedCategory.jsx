@@ -120,7 +120,8 @@ const RecommendedCategory = () => {
     ];
 
   return (
-    <div className='w-full flex items-center justify-center'>
+    <div className='w-full flex flex-col mt-5 items-center justify-center'>
+        <h1 className='text-2xl text-gray-700 font-bold'>Suggested Categories</h1>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 mx-auto lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 place-content-center gap-4 w-[70%] p-4">
                 {recommcate.map((item, index) => (
                     <div key={index} className="flex flex-col items-center">

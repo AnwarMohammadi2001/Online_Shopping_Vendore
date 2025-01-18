@@ -9,7 +9,8 @@ const SearchBar = () => {
 
   // Load recent searches from localStorage on component mount
   useEffect(() => {
-    const savedSearches = JSON.parse(localStorage.getItem("recentSearches")) || [];
+    const savedSearches =
+      JSON.parse(localStorage.getItem("recentSearches")) || [];
     setRecentSearches(savedSearches);
   }, []);
 
@@ -80,7 +81,8 @@ const SearchBar = () => {
 
       {/* Search List & Cancel Button */}
       {isExpanded && (
-        <div className="fixed top-0 left-0 right-0 px-8 pb-20 bg-white w-full z-40">
+        <div className="fixed top-0  left-0 right-0 px-8 pb-20 bg-white w-full z-40">
+         
           {/* Header Section */}
           <div className="flex justify-between items-center border-gray-200 px-4">
             <div className="flex items-center gap-x-1">
