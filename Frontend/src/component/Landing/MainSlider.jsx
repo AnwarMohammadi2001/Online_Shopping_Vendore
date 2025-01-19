@@ -24,7 +24,7 @@ const MainSlider = () => {
         pagination={{
           clickable: true,
           renderBullet: (index, className) =>
-            `<span class="${className} bg-gray-300 border text-gray-800 rounded-full w-8 h-8 flex items-center justify-center mx-1 font-bold hover:bg-red-500 hover:text-white transition duration-200"></span>`,
+            `<span class="${className} bg-gray-300  text-gray-800 rounded-full w-8 h-8 flex items-center justify-center mx-1 font-bold hover:bg-red-500 hover:text-white transition duration-200"></span>`,
         }}
         autoplay={{ delay: 3000 }}
         loop
